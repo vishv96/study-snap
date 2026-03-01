@@ -48,5 +48,9 @@ app.*.map.json
 setup_github.sh
 privacy-policy.html
 
+# Play Store credentials (NEVER commit this!)
+android/fastlane/play-store-credentials.json
+**/play-store-credentials.json
+
 # Local Netlify folder
 .netlify

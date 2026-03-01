@@ -1,0 +1,2 @@
+json_key_file("android/fastlane/play-store-credentials.json")
+package_name("com.vishnu.studysnap")
