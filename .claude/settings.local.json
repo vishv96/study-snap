@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter doctor:*)",
+      "Bash(flutter pub get:*)",
+      "Bash(/Users/vishnu/development/flutter/bin/cache/dart-sdk/bin/dart:*)"
+    ]
+  }
+}
