@@ -1,4 +1,4 @@
-package com.example.study_snap
+package com.vishnu.studysnap
 
 import io.flutter.embedding.android.FlutterActivity
 

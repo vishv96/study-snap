@@ -15,9 +15,9 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.studysnap.app"
+    namespace = "com.vishnu.studysnap"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "28.2.13676358"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.studysnap.app"
+        applicationId = "com.vishnu.studysnap"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
@@ -54,9 +54,9 @@ android {
             } else {
                 signingConfigs.getByName("debug")
             }
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            // Disable minification to avoid build issues
+            isMinifyEnabled = false
+            isShrinkResources = false
         }
     }
 }
