@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:study_snap/core/app/study_snap_app.dart';
-import 'package:study_snap/core/mocks/AiMockService.dart';
-import 'package:study_snap/core/services/ai_service.dart';
+import 'package:study_snap/core/services/ai_service_factory.dart';
 import 'package:study_snap/features/camera/bloc/camera_bloc.dart';
 import 'package:study_snap/features/camera/livecam_screen.dart';
 import 'package:study_snap/features/home/home_screen.dart';
@@ -21,7 +20,7 @@ class SnapApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/camera': (context) => BlocProvider(
-              create: (_) => CameraBloc(AiMockService()),
+              create: (_) => CameraBloc(AiServiceFactory.create()),
               child: const LivecamScreen(),
             ),
         '/gallery': (context) => Scaffold(
@@ -40,7 +39,7 @@ class SnapApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (_) => CameraBloc(AIService()),
+        create: (_) => CameraBloc(AiServiceFactory.create()),
         child: const HomeScreen(),
       ),
     );
